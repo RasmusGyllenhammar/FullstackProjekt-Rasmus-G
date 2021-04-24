@@ -9,6 +9,12 @@ body{
     background-repeat: no-repeat;
     
 }
+.register-body{
+    background-image: url('images/anfield.jpeg') ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 .navbar-dark{
     background-color: rgba(7, 22, 100, 1);
 }
