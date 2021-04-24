@@ -1,0 +1,22 @@
+body{
+    background-color: rebeccapurple;
+}
+
+.chat-body{
+    background-image: url('images/realMadrid.jpeg') ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.navbar-dark{
+    background-color: rgba(7, 22, 100, 1);
+}
+
+
+.form-body{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn-primary{
+    background-color: rgba(7, 22, 100, 1);
+}
