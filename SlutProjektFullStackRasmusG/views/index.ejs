@@ -16,26 +16,125 @@
 </head>
 <body>
     <div class="bs-example">
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a href="#" class="navbar-brand">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a href="/" class="navbar-brand">
                 <img src="images/logga.svg" height="75" alt="CoolBrand">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+        
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">Sign in</a>
-                    <a href="#" class="nav-item nav-link">Livechat</a>
-                    <a href="#" class="nav-item nav-link">About us</a>
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="login" class="nav-item nav-link">Sign in</a>
+                    <a href="chat" class="nav-item nav-link">Livechat</a>
+                    <a href="about" class="nav-item nav-link">About us</a>
+                    <a href="register" class="nav-item nav-link">Register</a>
                 </div>
                 
             </div>
         </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, <%= name  %> welcome to Live Chat Football!</h1>
+            <p class="lead">UEFA Champions league is one of the biggest tournaments in the world. Chat about Champions League here with other fans around the world! </p>
+            <hr class="my-4">
+            <img src="images/ucl.jpg" width="70%" alt="">
+            <p> UEFA Champions League Arena</p>
+            
+          </div>
+
+          <div class="row">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4">Register here!</h1>      
+                      <p> You only need to make an account once, then you can reuse that log in information again to chat with people!</p>
+                      <img src="images/night.jpeg" width="70%" alt="gg">
+                      <p>First leg between Real Madrid and Paris Saint German</p>
+                      <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="register" role="button">Register here</a>
+                      </p>
+                    </div>
+                    
+                  </div>
+            </div>
+            <div class="col"> <!--fortsätt HÄR sen--> 
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4">Already have an account?</h1>      
+                      <p> Log in here!</p>
+                      <img src="images/realMadrid.jpeg" width="84%" alt="gg">
+                      <p>Real Madrids's home stadium <i>Santiago Bernabéu-stadion</i> </p>
+                      <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="login" role="button">Sign in</a>
+                      </p>
+                      
+                    </div>
+                  </div>
+                  
+            </div>
+          
+            
+          </div>
         
-    <h1>hi <%= name  %> </h1>
+          <footer class="navbar-dark text-center text-lg-start">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase text-light">Live chat Football</h5>
+                        <p>
+                            <img src="images/logga.svg" width="20%">
+                        </p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase text-light">Social Media</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-light">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-0 text-light">LINKS</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-light">Rules</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">statistics</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Champions League Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+            <!-- Copyright -->
+            <div class="text-center p-3 text-light" >
+                © 2020 Copyright:
+                <a class="text-light" href="#"> Live Chat Football</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
     
 </body>
 </html>

@@ -26,3 +26,6 @@ body{
 .btn-primary{
     background-color: rgba(7, 22, 100, 1);
 }
+.jumbotron{
+    background-color: white;
+}
