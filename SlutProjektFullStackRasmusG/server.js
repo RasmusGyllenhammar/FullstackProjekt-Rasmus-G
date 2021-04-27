@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   res.render('index.ejs', {name: req.body.name})
 })
 
+app.get('/about', (req, res) => {
+  res.render('about.ejs')
+})
+
 app.get('/chat', (req, res) => {
   res.render('chat.ejs')
 })

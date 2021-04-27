@@ -25,7 +25,18 @@ body{
 }
 .btn-primary{
     background-color: rgba(7, 22, 100, 1);
+    border: rgba(7, 22, 100, 1);
 }
 .jumbotron{
     background-color: white;
+}
+.card-margin{
+    margin-top:  5%;
+    margin-bottom: 5%;
+}
+.card-title{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
 }
