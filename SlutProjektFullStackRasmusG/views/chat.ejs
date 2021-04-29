@@ -13,7 +13,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
 
-    <title>Document</title>
+    <title>chatRoom</title>
+    <style>
+       
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark">
@@ -36,14 +40,38 @@
         </div>
     </nav>
    <!--LiveChat-->
-   <div class="chat-div">
-    <div class="sidebar-chat"></div>
-    <div class="screen"></div>
-    <div class="message-div"></div>
+   
 
 
-   </div>
-    
+  <div class="container">
+    <header>
+        <h1><i class="fas fa-smile"></i> Live Chat Football</h1>
+    </header>
+    <main class="join-main">
+        <form action="/live-chat">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input  type="text" name="username" id="username" placeholder="Enter username..." required/>
+            </div>
+            <div class="form-control">
+                <label for="room">Room</label>
+                <select name="room" id="room">
+                    <option value="room-one">Room 1</option>
+                    <option value="room-two">Room 2</option>
+                    <option value="room-three">Room 3</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Join Chat</button>
+        </form>
+    </main>
+</div>
+
+
+ <script src="/socket.io/socket.io.js"></script> <!--ha koll på detta, kan bli ett fel-->
+ <script src="js/main.js"></script>
+
+  
+
    <!--Footer-->
 
 </body>

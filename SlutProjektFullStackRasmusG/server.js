@@ -2,8 +2,10 @@ const express = require('express')
 const http = require('http') //moduel för hantera sockets
 const app = express()
 const server = http.createServer(app)
-const socketio = require('socket.io')
+const socketio = require('socket.io') //init
+const io = socketio(server) //variabel
 const bcrypt = require('bcrypt')
+const PORT = process.env.PORT || 3000;
 
 const dbModule = require('./dBModule')
 const personModel = require('./Personmodule')
@@ -15,6 +17,25 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended: false})) //säger att att vi vill få åtkomst till infon i forms genom vår req variabel i post metod
 
+//kör när en person joinar skriver den detta dvs refresh sidan
+io.on('connection', socket => {
+  
+  //välkommnar nuvarande användare
+  socket.emit('message', 'welcome to live chat Football')
+
+  //skcika ut när en användare connects, bara till alla andra än en själv
+  socket.broadcast.emit('message', 'A user has joined the chat');
+
+  //kopplar ifrån
+  socket.on('disconnect', () => {
+    io.emit('message', 'A user has left the chat')
+  })
+
+ // io.emit() till alla klienter
+})
+
+
+
 app.get('/', (req, res) => {
   res.render('index.ejs', {name: req.body.name})
 })
@@ -23,7 +44,11 @@ app.get('/about', (req, res) => {
   res.render('about.ejs')
 })
 
-app.get('/chat', (req, res) => {
+app.get('/chat', async (req, res) => {
+  res.render('chat.ejs')
+})
+
+app.post('/', async (req, res) => {
   res.render('chat.ejs')
 })
 
@@ -45,6 +70,7 @@ app.post('/login', async (req, res) => {
         if (success){
           console.log("succes, you logged in");
           res.render('index.ejs', {name : user.name})
+          
         } 
         else{
           console.log("fail, u failed to log in");
@@ -76,4 +102,4 @@ app.post('/register', async (req, res) => {
   
 
 
-server.listen(3000)
+server.listen(PORT, () => console.log(`server runnin on port ${PORT}!`));
