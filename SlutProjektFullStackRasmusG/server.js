@@ -4,6 +4,7 @@ const app = express()
 const server = http.createServer(app)
 const socketio = require('socket.io') //init
 const io = socketio(server) //variabel
+const formatMessage = require('./utils/messages')
 const bcrypt = require('bcrypt')
 const PORT = process.env.PORT || 3000;
 
@@ -17,20 +18,25 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended: false})) //säger att att vi vill få åtkomst till infon i forms genom vår req variabel i post metod
 
+const admin = 'Livechat-Football Admin'
 //kör när en person joinar skriver den detta dvs refresh sidan
 io.on('connection', socket => {
   
   //välkommnar nuvarande användare
-  socket.emit('message', 'welcome to live chat Football')
+  socket.emit('message', formatMessage(admin,'welcome to live chat Football'))
 
   //skcika ut när en användare connects, bara till alla andra än en själv
-  socket.broadcast.emit('message', 'A user has joined the chat');
+  socket.broadcast.emit('message', formatMessage(admin, 'A user has joined the chat'));
 
   //kopplar ifrån
   socket.on('disconnect', () => {
-    io.emit('message', 'A user has left the chat')
+    io.emit('message', formatMessage(admin, 'A user has left the chat'))
   })
 
+  //kolla efter chatMessage
+  socket.on('chatMessage', (msg) => {
+   io.emit('message', formatMessage('User', msg))
+  }) 
  // io.emit() till alla klienter
 })
 
@@ -44,12 +50,15 @@ app.get('/about', (req, res) => {
   res.render('about.ejs')
 })
 
-app.get('/chat', async (req, res) => {
-  res.render('chat.ejs')
+app.get('/room', async (req, res) => {
+  res.render('room.ejs')
 })
 
-app.post('/', async (req, res) => {
-  res.render('chat.ejs')
+app.post('/room', async (req, res) => {
+  res.render('room.ejs')
+})
+app.get('/livechat', (req, res) => {
+  res.render('livechat.ejs')
 })
 
 app.get('/login', async (req, res) => {
