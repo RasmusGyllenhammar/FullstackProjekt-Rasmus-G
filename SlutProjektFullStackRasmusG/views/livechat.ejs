@@ -7,14 +7,14 @@
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
-
-  <style>
-
-      
-  </style>
-  <title> Live chat Football</title>
+<style>
+ 
+    </style>
+ 
+  <title> Live Chat Football</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark">
@@ -29,7 +29,7 @@
         <div class="navbar-nav">
             <a href="/" class="nav-item nav-link active">Home</a>
             <a href="login" class="nav-item nav-link">Sign in</a>
-            <a href="room" class="nav-item nav-link">Livechat</a>
+            <a href="livechat" class="nav-item nav-link">Livechat</a>
             <a href="about" class="nav-item nav-link">About us</a>
             <a href="register" class="nav-item nav-link">Register</a>
         </div>
@@ -41,21 +41,22 @@
 
   <div class="chat-container">
     <header class="chat-header">
-      <h1><i class="fas fa-smile"></i> Live chat Football</h1>
-      <a href="/room" class="btn">Leave Room</a>
+      <h1> Live chat Football</h1>
+      <a href="/" class="btn btn-danger btn-lg" role="button">Leave chat</a>
     </header>
     <main class="chat-main">
       <div class="chat-sidebar">
         <h3><i class="fas fa-comments"></i> Room Name:</h3>
-        <h2 id="room-name">JavaScript</h2>
-        <h3><i class="fas fa-users"></i> Users</h3>
-        <ul id="users">
-          <li>nameOne</li>
-          <li>nameTwo</li>
-          <li>nameThree</li>
+        <h2 id="room-name">Ultra UCL Room</h2>
+        <h3><i class="rules"></i> Rules:</h3>
+        <ul id="rules-list">
+          <li>no Spamm, will be kicked</li>
+          <li> Be kind</li> <!--får samma namn på andra klienten-->
+          <li>Respect other humans</li>
+          <li>No bullying, sexism or homophobia hate</li>
         </ul>
       </div>
-      <div class="chat-messages">		 </div>
+      <div class="chat-messages">	<!--chatrutan--> </div>
     </main>
     <div class="chat-form-container">
       <form id="chat-form">
@@ -70,6 +71,63 @@
       </form>
     </div>
   </div>
+
+  <footer class="navbar-dark text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase text-light">Live chat Football</h5>
+                <p>
+                    <img src="images/logga.svg" width="20%">
+                </p>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase text-light">Social Media</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-light">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0 text-light">LINKS</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="text-light">Rules</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">statistics</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Champions League Table</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3 text-light" >
+        © 2020 Copyright:
+        <a class="text-light" href="#"> Live Chat Football</a>
+    </div>
+    <!-- Copyright -->
+</footer>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,6 +1,13 @@
 const chatForm = document.getElementById('chat-form')
 const chatMessages = document.querySelector('.chat-messages');
+
+
+
+
 const socket = io();
+
+//kopplar till ett rum
+//socket.emit('joinRoom', {username, room});
 
 //sms från servern sida, varje gång vi får ett meddelande går igenom här
 socket.on('message', message => {
@@ -18,6 +25,7 @@ chatForm.addEventListener('submit', (e) => {
     const msg = e.target.elements.msg.value;
     //skickar sms till server
     socket.emit('chatMessage', msg);
+   // outputMessage(`You: ${msg}`)
     //töm sms-fältet, fokuserar på en tom input
     e.target.elements.msg.value = '';
     e.target.elements.msg.focus();
