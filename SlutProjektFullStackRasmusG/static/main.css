@@ -95,7 +95,7 @@ body{
   .chat-messages .message {
     padding: 10px;
     margin-bottom: 15px;
-    background-color: pink;
+    background-color: pink; /*chat FÄRGEN*/
     border-radius: 5px;
   }
   

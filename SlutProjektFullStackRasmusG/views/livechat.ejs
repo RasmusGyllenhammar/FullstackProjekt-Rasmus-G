@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css">
-<style>
- 
-    </style>
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+    integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <style>
+
+  </style>
+
   <title> Live Chat Football</title>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-md navbar-dark">
     <a href="/" class="navbar-brand">
-        <img src="images/logga.svg" height="75" alt="CoolBrand">
+      <img src="images/logga.svg" height="75" alt="CoolBrand">
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-            <a href="/" class="nav-item nav-link active">Home</a>
-            <a href="login" class="nav-item nav-link">Sign in</a>
-            <a href="livechat" class="nav-item nav-link">Livechat</a>
-            <a href="about" class="nav-item nav-link">About us</a>
-            <a href="register" class="nav-item nav-link">Register</a>
-        </div>
-        
+      <div class="navbar-nav">
+        <a href="/" class="nav-item nav-link active">Home</a>
+        <a href="login" class="nav-item nav-link">Sign in</a>
+        <a href="livechat" class="nav-item nav-link">Livechat</a>
+        <a href="about" class="nav-item nav-link">About us</a>
+        <a href="register" class="nav-item nav-link">Register</a>
+      </div>
+
     </div>
-</nav>
+  </nav>
 
 
 
@@ -51,22 +55,19 @@
         <h3><i class="rules"></i> Rules:</h3>
         <ul id="rules-list">
           <li>no Spamm, will be kicked</li>
-          <li> Be kind</li> <!--får samma namn på andra klienten-->
+          <li> Be kind</li>
+          <!--får samma namn på andra klienten-->
           <li>Respect other humans</li>
           <li>No bullying, sexism or homophobia hate</li>
         </ul>
       </div>
-      <div class="chat-messages">	<!--chatrutan--> </div>
+      <div class="chat-messages">
+        <!--chatrutan-->
+      </div>
     </main>
     <div class="chat-form-container">
       <form id="chat-form">
-        <input
-          id="msg"
-          type="text"
-          placeholder="Enter Message"
-          required
-          autocomplete="off"
-        />
+        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
         <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
       </form>
     </div>
@@ -75,60 +76,61 @@
   <footer class="navbar-dark text-center text-lg-start">
     <!-- Grid container -->
     <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase text-light">Live chat Football</h5>
-                <p>
-                    <img src="images/logga.svg" width="20%">
-                </p>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase text-light">Social Media</h5>
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-light">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-light">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-light">Youtube</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-0 text-light">LINKS</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!" class="text-light">Rules</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-light">statistics</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-light">Champions League Table</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-light">Live chat Football</h5>
+          <p>
+            <img src="images/logga.svg" width="20%">
+          </p>
         </div>
-        <!--Grid row-->
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-light">Social Media</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-light">Instagram</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Facebook</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0 text-light">LINKS</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-light">Rules</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">statistics</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Champions League Table</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
     </div>
     <!-- Grid container -->
     <!-- Copyright -->
-    <div class="text-center p-3 text-light" >
-        © 2020 Copyright:
-        <a class="text-light" href="#"> Live Chat Football</a>
+    <div class="text-center p-3 text-light">
+      © 2020 Copyright:
+      <a class="text-light" href="#"> Live Chat Football</a>
     </div>
     <!-- Copyright -->
-</footer>
+  </footer>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

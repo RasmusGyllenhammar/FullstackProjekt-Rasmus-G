@@ -8,8 +8,8 @@ const formatMessage = require('./utils/messages')
 const bcrypt = require('bcrypt')
 const PORT = process.env.PORT || 3000;
 
-const dbModule = require('./dBModule')
-const personModel = require('./Personmodule')
+const dbModule = require('./utils/dBModule')
+const personModel = require('./utils/Personmodule')
 const staticDir = __dirname + '\\static\\'
 app.use(express.static(staticDir)) //statiska filer
 
@@ -33,8 +33,9 @@ io.on('connection', socket => {
   
 
   //kolla efter chatMessage
-  socket.on('chatMessage', (msg) => {
-   io.emit('message', formatMessage('User', msg))
+  socket.on('chatMessage', (msg, username) => {
+   
+   io.emit('message', formatMessage('User', msg)) //här är msg får lägga till användare ta bort 'user
   }) 
  //kopplar ifrån
  socket.on('disconnect', () => {
@@ -52,13 +53,14 @@ app.get('/about', (req, res) => {
   res.render('about.ejs')
 })
 
-var username = ""
 
-app.get('/livechat', (req, res) => {
- if (username == "") {
+
+app.get('/livechat', async (req, res) => {
+  var username = ""
+  if (username == "") {
    res.render('login.ejs')
  } else {
-  res.render('livechat.ejs', { username : personModel.getAllPersons.name })
+  res.render('livechat.ejs', { username : personModel.getAllPersons.name }) //kolla på denna med
  }
  
 })
