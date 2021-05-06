@@ -26,4 +26,8 @@ exports.getUser = async function(uEmail) {
   var uPersonList = await Person.findOne({email : uEmail}) //hitta en användare med den här mailen
   return uPersonList 
 }
-//göra en till exports?
+//göra en till exports getUser med uName?
+/*exports.getUser = async function(uName) {
+  var uNameList = await Person.findOne({name : uName})
+  return uNameList
+}*/

@@ -6,8 +6,7 @@ const chatMessages = document.querySelector('.chat-messages');
 
 const socket = io();
 
-//kopplar till ett rum
-//socket.emit('joinRoom', {username, room});
+
 
 //sms från servern sida, varje gång vi får ett meddelande går igenom här
 socket.on('message', message => {
@@ -19,10 +18,10 @@ socket.on('message', message => {
 } );
 
 //message submit
-chatForm.addEventListener('submit', (e) => {
+ chatForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     //fångar upp texten i formet
-    const msg = e.target.elements.msg.value;
+    const msg = await e.target.elements.msg.value;
     //skickar sms till server
     socket.emit('chatMessage', msg);
    // outputMessage(`You: ${msg}`)
@@ -33,6 +32,7 @@ chatForm.addEventListener('submit', (e) => {
 
 //meddelande till DOm, objekt o inte en string längre
 function outputMessage(message) {
+    
     const div = document.createElement('div');
     div.classList.add('message');
     div.innerHTML = `<p class="meta">${message.username} <span>${message.time}</span></p>

@@ -6,6 +6,7 @@ const socketio = require('socket.io') //init
 const io = socketio(server) //variabel
 const formatMessage = require('./utils/messages')
 const bcrypt = require('bcrypt')
+const expressLayouts = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000;
 
 const dbModule = require('./utils/dBModule')
@@ -13,7 +14,7 @@ const personModel = require('./utils/Personmodule')
 const staticDir = __dirname + '\\static\\'
 app.use(express.static(staticDir)) //statiska filer
 
-
+//app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended: false})) //säger att att vi vill få åtkomst till infon i forms genom vår req variabel i post metod
@@ -32,10 +33,10 @@ io.on('connection', socket => {
 
   
 
-  //kolla efter chatMessage
-  socket.on('chatMessage', (msg, username) => {
-   
-   io.emit('message', formatMessage('User', msg)) //här är msg får lägga till användare ta bort 'user
+  //kolla efter chatMessage, kopplar efter att en socket kopplat
+  socket.on('chatMessage', async (msg, username) => {
+    
+   io.emit('message', formatMessage(username, msg)) //här är msg får lägga till användare ta bort 'user
   }) 
  //kopplar ifrån
  socket.on('disconnect', () => {
@@ -60,7 +61,7 @@ app.get('/livechat', async (req, res) => {
   if (username == "") {
    res.render('login.ejs')
  } else {
-  res.render('livechat.ejs', { username : personModel.getAllPersons.name }) //kolla på denna med
+  res.render('livechat.ejs', { username : personModel.getAllPersons.name }) //kolla på denna med, behövs detta?
  }
  
 })
