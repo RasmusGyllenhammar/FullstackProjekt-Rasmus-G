@@ -21,25 +21,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a href="/" class="navbar-brand">
-      <img src="images/logga.svg" height="75" alt="CoolBrand">
-    </a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav">
-        <a href="/" class="nav-item nav-link active">Home</a>
-        <a href="login" class="nav-item nav-link">Sign in</a>
-        <a href="livechat" class="nav-item nav-link">Livechat</a>
-        <a href="about" class="nav-item nav-link">About us</a>
-        <a href="register" class="nav-item nav-link">Register</a>
-      </div>
-
-    </div>
-  </nav>
+  <%- include('./partials/header.ejs') %> 
 
 
 
@@ -74,62 +56,7 @@
     </div>
   </div>
 
-  <footer class="navbar-dark text-center text-lg-start">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase text-light">Live chat Football</h5>
-          <p>
-            <img src="images/logga.svg" width="20%">
-          </p>
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase text-light">Social Media</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-light">Instagram</a>
-            </li>
-            <li>
-              <a href="#!" class="text-light">Facebook</a>
-            </li>
-            <li>
-              <a href="#!" class="text-light">Youtube</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0 text-light">LINKS</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-light">Rules</a>
-            </li>
-            <li>
-              <a href="#!" class="text-light">statistics</a>
-            </li>
-            <li>
-              <a href="#!" class="text-light">Champions League Table</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-    <!-- Copyright -->
-    <div class="text-center p-3 text-light">
-      © 2020 Copyright:
-      <a class="text-light" href="#"> Live Chat Football</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  <%- include('./partials/footer.ejs') %> 
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
 </body>
