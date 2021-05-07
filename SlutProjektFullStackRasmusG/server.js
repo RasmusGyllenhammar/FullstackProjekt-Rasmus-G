@@ -14,7 +14,7 @@ const personModel = require('./utils/Personmodule')
 const staticDir = __dirname + '\\static\\'
 app.use(express.static(staticDir)) //statiska filer
 
-//app.use(expressLayouts)
+//app.use(expressLayouts) ta bort
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended: false})) //säger att att vi vill få åtkomst till infon i forms genom vår req variabel i post metod

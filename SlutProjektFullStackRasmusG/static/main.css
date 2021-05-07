@@ -2,7 +2,7 @@ body{
     background-color: rebeccapurple;
 }
 
-.chat-body{
+.login-body{
     background-image: url('images/realMadrid.jpeg') ;
     background-size: cover;
     background-attachment: fixed;
@@ -18,8 +18,6 @@ body{
 .navbar-dark{
     background-color: rgba(7, 22, 100, 1);
 }
-
-
 .form-body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -125,6 +123,32 @@ body{
     padding: 5px;
     height: 40px;
     flex: 1;
+  }
+  /*mobil-version*/
+  @media screen and (max-width: 500px){
+    .intro-pic{
+      width: 120%;
+    }
+    .card{
+      margin: 2%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .login-body{
+      background-image: url('images/realMadrid.jpeg') ;
+      max-width: 100%;
+      
+    }
+    /*Chat-sidan css för mobil*/
+    .chat-sidebar{
+     
+      width: 165%;
+    }
+    .chat-messages{
+      margin-left: 17%;
+    }
+    /*fixa cards, lite margin och centrera dem*/
+    /*backgrunds bilder på login och register*/
   }
         
 
