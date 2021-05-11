@@ -149,11 +149,15 @@ body{
     /*Chat-sidan css för mobil*/
     .chat-sidebar{
      
-      width: 165%;
+      display: block;
     }
     .chat-messages{
-      margin-left: 17%;
+      margin-left: 0%;
     }
+    .chat-main {
+      display: block;
+    }
+  
     
     /*backgrunds bilder på login och register*/
   }
