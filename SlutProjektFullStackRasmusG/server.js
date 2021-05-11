@@ -35,7 +35,7 @@ io.on('connection', socket => {
 
   //kolla efter chatMessage, kopplar efter att en socket kopplat
   socket.on('chatMessage', async (msg, username) => {
-    
+   // username = await personModel.getUserByEmail()
    io.emit('message', formatMessage(username, msg)) //här är msg får lägga till användare ta bort 'user
   }) 
  //kopplar ifrån
@@ -74,7 +74,7 @@ app.get('/login', async (req, res) => {
   
 app.post('/login', async (req, res) => {
     
-    const user = await personModel.getUser(req.body.email);
+    const user = await personModel.getUserByEmail(req.body.email);
     //skickar in vårt lösenord från forumläret samt krypterande lösenordet
       await bcrypt.compare(req.body.password, user.password, (err, success) => { //när compare är färdig så kallas funktionen
       if (err) {

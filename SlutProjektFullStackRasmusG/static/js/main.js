@@ -24,13 +24,15 @@ socket.on('message', message => {
     const msg = await e.target.elements.msg.value;
     //skickar sms till server
     socket.emit('chatMessage', msg);
-   // outputMessage(`You: ${msg}`)
-    //töm sms-fältet, fokuserar på en tom input
+   //outputMessage(`You: ${msg}`)
+    
+   //töm sms-fältet, fokuserar på en tom input
     e.target.elements.msg.value = '';
     e.target.elements.msg.focus();
 })
 
 //meddelande till DOm, objekt o inte en string längre
+//namnge username här
 function outputMessage(message) {
     
     const div = document.createElement('div');

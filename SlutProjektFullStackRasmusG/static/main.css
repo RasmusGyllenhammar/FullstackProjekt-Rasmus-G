@@ -15,6 +15,12 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+.about-body{
+  background-image: url('images/austria.jpeg') ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 .navbar-dark{
     background-color: rgba(7, 22, 100, 1);
 }
@@ -139,6 +145,7 @@ body{
       max-width: 100%;
       
     }
+    
     /*Chat-sidan css för mobil*/
     .chat-sidebar{
      
@@ -147,7 +154,7 @@ body{
     .chat-messages{
       margin-left: 17%;
     }
-    /*fixa cards, lite margin och centrera dem*/
+    
     /*backgrunds bilder på login och register*/
   }
         

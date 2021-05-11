@@ -22,12 +22,13 @@ exports.getAllPersons = async () => {
   return personList
 }
 //skickar med userEmail och baserat på användaren skrivit på i email fältet så jämnför man ifall det finns i databasen och hämtar den ifall det finns
-exports.getUser = async function(uEmail) {
+exports.getUserByEmail = async function(uEmail) {
   var uPersonList = await Person.findOne({email : uEmail}) //hitta en användare med den här mailen
   return uPersonList 
 }
 //göra en till exports getUser med uName?
-/*exports.getUser = async function(uName) {
-  var uNameList = await Person.findOne({name : uName})
-  return uNameList
-}*/
+exports.getUserByName = async function(uName) {
+  var uName = await Person.findOne({name : uName})
+  console.log(uName)
+  return uName
+}
