@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="bootsrap.css">
-<link rel="stylesheet" href="main.css">
 
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" href="images/mini.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="bootsrap.css">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Sign In</title>
 </head>
+
 <body class="login-body">
-  <%- include('./partials/navbar.ejs') %> 
-  
+  <%- include('./partials/navbar.ejs') %>
+
 
     <div class="container form-container">
-        <div class="row">
-          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-              <div class="card-body form-body">
-                <h5 class="card-title text-center">Sign In</h5>
-               
-                <form action="/login" method="POST" class="form-signin">
-                  <div class="form-label-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" name="name" class="form-control" placeholder="Name"  required>
-              
-                  </div>
-                  <div class="form-label-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required>
-              
-                  </div>
-              
-                  <div class="form-label-group">
-                      <label for="password">Password</label>
-                      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-              
-                  </div>
-                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="margin-top: 2%;">Login</button>
-                  </form>
-                 
-                  <hr class="my-4">
-                  <a class="btn btn-danger btn-lg btn-block" href="login" role="button">Register here</a>
-                
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body form-body">
+              <h5 class="card-title text-center">Sign In</h5>
 
-                  
-                
-              </div>
+              <form action="/login" method="POST" class="form-signin">
+                <div class="form-label-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+
+                </div>
+                <div class="form-label-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required>
+
+                </div>
+
+                <div class="form-label-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                    required>
+
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"
+                  style="margin-top: 2%;">Login</button>
+              </form>
+
+              <hr class="my-4">
+              <a class="btn btn-danger btn-lg btn-block" href="login" role="button">Register here</a>
+
+
+
+
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      
+
 </body>
+
 </html>

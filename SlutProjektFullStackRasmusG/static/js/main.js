@@ -13,7 +13,7 @@ socket.on('message', message => {
     console.log(message);
     outputMessage(message);
 
-    //scrolla ner för varje meddelande, funkar ej än får fixa det
+    //scrolla ner för varje meddelande
     chatMessages.scrollTop = chatMessages.scrollHeight;
 } );
 
@@ -43,4 +43,10 @@ function outputMessage(message) {
     </p>`;
     document.querySelector('.chat-messages').appendChild(div); 
     //när det skapas ett nytt sms så får den en ny div
+}
+
+
+
+function outPutName(username) {
+    
 }

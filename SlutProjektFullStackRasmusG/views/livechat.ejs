@@ -12,6 +12,7 @@
     integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" href="images/mini.png" type="image/gif" sizes="16x16">
   <link rel="stylesheet" href="main.css">
   <style>
 
@@ -21,44 +22,47 @@
 </head>
 
 <body>
-  <%- include('./partials/navbar.ejs') %> 
+  <%- include('./partials/navbar.ejs') %>
 
 
 
-  <div class="chat-container">
-    <header class="chat-header">
-      <h1> Live chat Football</h1>
-      <a href="/" class="btn btn-danger btn-lg" role="button">Leave chat</a>
-    </header>
-    <main class="chat-main">
-      <div class="chat-sidebar">
-        <h3><i class="fas fa-comments"></i> Room Name:</h3>
-        <h2 id="room-name">Ultra UCL Room</h2>
-        <h3><i class="rules"></i> Rules:</h3>
-        <ul id="rules-list">
-          <li>no Spamm, will be kicked</li>
-          <li> Be kind</li>
-          <!--får samma namn på andra klienten-->
-          <li>Respect other humans</li>
-          <li>No bullying, sexism or homophobia hate</li>
-        </ul>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1> Live chat Football</h1>
+        <a href="/" class="btn btn-danger btn-lg" role="button">Leave chat</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i> Room Name:</h3>
+          <h2 id="room-name">Ultra UCL Room</h2>
+          <h3><i class="rules"></i> Rules:</h3>
+          <ul id="rules-list">
+            <li>no Spamm, will be kicked</li>
+            <li> Be kind</li>
+            <!--får samma namn på andra klienten-->
+            <li>Respect other humans</li>
+            <li>No bullying, sexism or homophobia hate</li>
+          </ul>
+        </div>
+        <div class="chat-messages">
+          <!---->
+          <p>
+            <%= name %>
+          </p>
+          <!--chatrutan-->
+        </div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+          <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
       </div>
-      <div class="chat-messages">
-       <!----> <p><%= name %> </p>
-        <!--chatrutan-->
-      </div>
-    </main>
-    <div class="chat-form-container">
-      <form id="chat-form">
-        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
-      </form>
     </div>
-  </div>
 
-  <%- include('./partials/footer.ejs') %> 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="js/main.js"></script>
+    <%- include('./partials/footer.ejs') %>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/main.js"></script>
 </body>
 
 </html>

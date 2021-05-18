@@ -31,11 +31,11 @@ io.on('connection', socket => {
   //skcika ut när en användare connects, bara till alla andra än en själv
   socket.broadcast.emit('message', formatMessage(admin, 'A user has joined the chat'));
 
-  
-
   //kolla efter chatMessage, kopplar efter att en socket kopplat
   socket.on('chatMessage', async (msg, username) => {
-   // username = await personModel.getUserByEmail()
+    //nameTest = await personModel.getUserByName(username)
+    //username = nameTest.name
+    username = 'banan'
    io.emit('message', formatMessage(username, msg)) //här är msg får lägga till användare ta bort 'user
   }) 
  //kopplar ifrån

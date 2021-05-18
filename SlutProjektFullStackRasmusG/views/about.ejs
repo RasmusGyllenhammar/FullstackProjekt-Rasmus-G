@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css">
-    <title>About Us</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" href="images/mini.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="main.css">
+  <title>About Us</title>
 </head>
+
 <body class="about-body">
-  <%- include('./partials/navbar.ejs') %>  
-    <!--Får fixa mobilversion sen-->
+  <%- include('./partials/navbar.ejs') %>
+   
     <div class="container card-margin">
 
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width:300px">
-                    <img class="card-img-top rounded-circle" src="images/business.jpeg" alt="Card image" height="400px" style="width:100%">
-                    <div class="card-body">
-                      <h4 class="card-title">John Doe</h4>
-                      <p class="card-text">"you miss 100 of the shots you don't take". John Doe works as a pundit
-                        for Sky Sports. She has a degree of master of science in business and economics.
-                      </p>
-                      
-                    </div>
-                  </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width:300px">
-                    <img class="card-img-top rounded-circle" src="images/old.jpeg" alt="Card image" height="400px"  style="width:100%">
-                    <div class="card-body">
-                      <h4 class="card-title">Uncle Lee</h4>
-                      <p class="card-text">Uncle Lee is one of the most famous football players in the world.
-                        Retiring back in 1967 did not stop him from being involved in the football franchise.
-                      </p>
-                      
-                    </div>
-                  </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width:300px">
-                    <img class="card-img-top rounded-circle" src="images/young.jpg" alt="Card image" height="400px" style="width:100%">
-                    <div class="card-body">
-                      <h4 class="card-title">Eder Panaccio</h4>
-                      <p class="card-text">Eder is an architect and engineer and loves football. He is the 
-                        main man when it comes to building the website but he's also the student of Uncle Lee.
-                      </p>
-                     
-                    </div>
-                  </div>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width:300px">
+            <img class="card-img-top rounded-circle" src="images/business.jpeg" alt="Card image" height="400px"
+              style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">"you miss 100 of the shots you don't take". John Doe works as a pundit
+                for Sky Sports. She has a degree of master of science in business and economics.
+              </p>
+
             </div>
           </div>
-    
+        </div>
+        <div class="col">
+          <div class="card" style="width:300px">
+            <img class="card-img-top rounded-circle" src="images/old.jpeg" alt="Card image" height="400px"
+              style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Uncle Harris</h4>
+              <p class="card-text">Uncle Lee is one of the most famous football players in the world.
+                Retiring back in 1967 did not stop him from being involved in the football franchise.
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width:300px">
+            <img class="card-img-top rounded-circle" src="images/young.jpg" alt="Card image" height="400px"
+              style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Eder Panaccio</h4>
+              <p class="card-text">Eder is an architect and engineer and loves football. He is the
+                main man when it comes to building the website but he's also the student of Uncle Lee.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <%- include('./partials/footer.ejs') %> 
-    
-    
-    <!--Carousel-->
-  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <%- include('./partials/footer.ejs') %>
+
+
+      <!--Carousel-->
+      <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -88,7 +94,8 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>--> 
-    
+      </div>-->
+
 </body>
+
 </html>

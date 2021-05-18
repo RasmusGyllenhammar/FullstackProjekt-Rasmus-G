@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" href="images/mini.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="main.css">
 
-    <title>Document</title>
+  <title>Home Trophy</title>
 </head>
+
 <body>
-    <div class="bs-example">
-     
-        <%- include('./partials/navbar.ejs') %> 
-        <div class="jumbotron">
-            <h1 class="display-4">Hello, <%= name  %> welcome to Live Chat Football!</h1>
-            <p class="lead">UEFA Champions league is one of the biggest tournaments in the world. Chat about Champions League here with other fans around the world! </p>
-            <hr class="my-4">
-           <div class="intro-pic"> <img src="images/ucl.jpg" width="70%" alt=""></div>
-            <p> UEFA Champions League Arena</p>
-            
+  <div class="bs-example">
+
+    <%- include('./partials/navbar.ejs') %>
+      <div class="jumbotron">
+        <h1 class="display-4">Hello, <%= name %> welcome to Live Chat Football!</h1>
+        <p class="lead">UEFA Champions league is one of the biggest tournaments in the world. Chat about Champions
+          League here with other fans around the world! </p>
+        <hr class="my-4">
+        <div class="intro-pic"> <img src="images/ucl.jpg" width="70%" alt=""></div>
+        <p> UEFA Champions League Arena</p>
+
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Register here!</h1>
+              <p> You only need to make an account once, then you can reuse that log in information again to chat with
+                people!</p>
+              <div class="intro-pic"> <img src="images/night.jpeg" width="70%" alt="gg"></div>
+              <p>First leg between Real Madrid and Paris Saint German</p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="register" role="button">Register here</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col">
+          <!--fortsätt HÄR sen-->
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Already have an account?</h1>
+              <p> Log in here!</p>
+              <img src="images/realMadrid.jpeg" width="84%" alt="gg">
+              <p>Real Madrids's home stadium <i>Santiago Bernabéu-stadion</i> </p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="login" role="button">Sign in</a>
+              </p>
+
+            </div>
           </div>
 
-          <div class="row">
-            <div class="col">
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-4">Register here!</h1>      
-                      <p> You only need to make an account once, then you can reuse that log in information again to chat with people!</p>
-                    <div class="intro-pic"> <img src="images/night.jpeg" width="70%" alt="gg"></div> 
-                      <p>First leg between Real Madrid and Paris Saint German</p>
-                      <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="register" role="button">Register here</a>
-                      </p>
-                    </div>
-                    
-                  </div>
-            </div>
-            <div class="col"> <!--fortsätt HÄR sen--> 
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-4">Already have an account?</h1>      
-                      <p> Log in here!</p>
-                      <img src="images/realMadrid.jpeg" width="84%" alt="gg">
-                      <p>Real Madrids's home stadium <i>Santiago Bernabéu-stadion</i> </p>
-                      <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="login" role="button">Sign in</a>
-                      </p>
-                      
-                    </div>
-                  </div>
-                  
-            </div>
-          
-            
-          </div>
-        
-         <%- include('./partials/footer.ejs') %> 
-    
+        </div>
+
+
+      </div>
+
+      <%- include('./partials/footer.ejs') %>
+
 </body>
+
 </html>
