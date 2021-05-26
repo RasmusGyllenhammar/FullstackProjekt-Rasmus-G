@@ -95,7 +95,7 @@ body{
     max-height: 500px;
     overflow-y: scroll;
   }
-  
+  /*chat FÄRGEN*/
   .chat-messages .message {
     padding: 10px;
     margin-bottom: 15px;

@@ -21,10 +21,11 @@ app.use(express.urlencoded({extended: false})) //säger att att vi vill få åtk
 
 const admin = 'Livechat-Football Admin'
 
+
 //kör när en person joinar skriver den detta dvs refresh sidan
 io.on('connection', socket => {
   
-
+  
   //välkommnar nuvarande användare
   socket.emit('message', formatMessage(admin,'welcome to live chat Football'))
 
@@ -33,10 +34,11 @@ io.on('connection', socket => {
 
   //kolla efter chatMessage, kopplar efter att en socket kopplat
   socket.on('chatMessage', async (msg, username) => {
-    //nameTest = await personModel.getUserByName(username)
-    //username = nameTest.name
-    username = 'banan'
-   io.emit('message', formatMessage(username, msg)) //här är msg får lägga till användare ta bort 'user
+    nameTest = await personModel.getUserByName(username)
+    
+    var name = 'user'
+   
+   io.emit('message', formatMessage( name , msg)) //här är msg får lägga till användare ta bort 'user
   }) 
  //kopplar ifrån
  socket.on('disconnect', () => {
@@ -54,7 +56,9 @@ app.get('/about', (req, res) => {
   res.render('about.ejs')
 })
 
-
+app.get('/room', (req, res) => {
+  res.render('room.ejs')
+})
 
 app.get('/livechat', async (req, res) => {
   var username = ""
